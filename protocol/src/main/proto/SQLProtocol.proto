@@ -1,0 +1,57 @@
+package com.abc.carrygo.common.protocol;
+
+option java_package = "com.abc.carrygo.protocol";
+
+option java_outer_classname = "SQLEventEntry";
+
+option optimize_for = SPEED;
+
+message SQLEntry {
+    required EntryType entry = 1;
+    repeated DMLEntry dmlEntries = 2;
+    repeated DDLEntry ddlEntries = 3;
+}
+
+message DDLEntry {
+    required string db = 1;
+    required string table = 2;
+    required KeyWord keyword = 3;
+    repeated DDLCol ddlCols = 4;
+}
+
+message DDLCol {
+    required KeyWord keyword = 1;
+    optional bool isKey = 2 [default = false];
+    optional string col = 3;
+    optional string changeCol = 4;
+}
+
+message DMLEntry {
+    required string db = 1;
+    required string table = 2;
+    required KeyWord keyword = 3;
+    repeated DMLCol dmlCols = 4;
+}
+
+message DMLCol {
+    required string col = 1;
+    required bool isKey = 2;
+    required bool isUpdate = 3;
+    required string value = 4;
+}
+
+enum EntryType {
+    DML = 1;
+    DDL = 2;
+}
+
+enum KeyWord {
+    CREATE = 1;
+    ALTER = 2;
+    ADD = 3;
+    DROP = 4;
+    CHANGE = 5;
+    UPDATE = 6;
+    INSERT = 7;
+    DELETE = 8;
+}

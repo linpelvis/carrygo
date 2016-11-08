@@ -295,6 +295,8 @@ public class HBaseTableAdmin {
     public void createTable(
             String tableName,
             String columnFamily) throws IOException {
+        log.info("hbase create table, table:{}, colf:{}", tableName, columnFamily);
+
         createTable(tableName, columnFamily, "", "", "", "", "");
     }
 

@@ -135,6 +135,8 @@ public class ParserUtil {
 
             if (sqlStatement instanceof MySqlCreateTableStatement) {
                 MySqlCreateTableStatement stmt = (MySqlCreateTableStatement) sqlStatement;
+                int tableElementSize = stmt.getTableElementList().size();
+
                 for (SQLTableElement element : stmt.getTableElementList()) {
                     DDLCol.Builder ddlCol = DDLCol.newBuilder();
 
@@ -142,6 +144,10 @@ public class ParserUtil {
                         String colName = ((MySqlSQLColumnDefinition) element).getName().getSimpleName();
                         ddlCol.setKeyword(KeyWord.CREATE);
                         ddlCol.setCol(replaceAll(colName));
+                        
+                        if (tableElementSize == 1) {
+                            ddlCol.setIsKey(true);
+                        }
                     }
 
                     if (element instanceof MySqlPrimaryKey) {

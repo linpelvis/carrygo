@@ -3,6 +3,7 @@ carrygo
 
 [![Code Health](https://landscape.io/github/linpelvis/carrygo/master/landscape.svg?style=flat)](https://landscape.io/github/linpelvis/carrygo/master)
 [![Requirements Status](https://requires.io/github/linpelvis/carrygo/requirements.svg?branch=master)](https://requires.io/github/linpelvis/carrygo/requirements/?branch=master)
+[![Code Climate](https://codeclimate.com/github/linpelvis/carrygo/badges/gpa.svg)](https://codeclimate.com/github/linpelvis/carrygo)
 
 
 主要作用是同步mysql数据库至hbase，kudu等存储系统。

@@ -1,6 +1,9 @@
 carrygo
 ===========
 
+[![Requirements Status](https://requires.io/github/linpelvis/carrygo/requirements.svg?branch=master)](https://requires.io/github/linpelvis/carrygo/requirements/?branch=master)
+
+
 主要作用是同步mysql数据库至hbase，kudu等存储系统。
 
 

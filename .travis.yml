@@ -1,22 +1,18 @@
-{
-  "sudo": "required",
-  "dist": "trusty",
-  "cache": {
-    "directories": [
-      "$HOME/.m2"
-    ]
-  },
+language: java
 
-  "language": "java",
-  "jdk": "oraclejdk7",
+jdk: openjdk7
+  
+cache: {
+  directories:
+    - $HOME/.m2
+},
 
-  "before_install":
-    - ./install-protobuf.sh
+before_install:
+  - ./install-protobuf.sh
 
-  "install": [
-    "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
-  ],
-
-  "group": "stable",
-  "os": "linux"
-}
+install:
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+    
+group: stable
+  
+os: linux

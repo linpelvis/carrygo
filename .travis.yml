@@ -8,6 +8,8 @@
   },
   "language": "java",
   "jdk": "oraclejdk7",
+  "before_install": 
+    - sudo apt-get install -qq protobuf-compiler
   "install": [
     "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
   ],

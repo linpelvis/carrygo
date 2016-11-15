@@ -4,7 +4,7 @@ cache:
   directories:
     - $HOME/.m2
 before_install:
-  - ./install_protobuf.sh
+  - ./travis/install_protobuf.sh
 install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 group: stable

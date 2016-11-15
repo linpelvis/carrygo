@@ -6,13 +6,17 @@
       "$HOME/.m2"
     ]
   },
+
   "language": "java",
   "jdk": "oraclejdk7",
-  "before_install": 
-    - sudo apt-get install -qq protobuf-compiler
+
+  "before_install":
+    - ./install-protobuf.sh,
+
   "install": [
     "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"
   ],
+
   "group": "stable",
   "os": "linux"
 }

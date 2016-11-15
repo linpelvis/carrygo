@@ -1,6 +1,7 @@
 carrygo
 ===========
 
+[![Code Health](https://landscape.io/github/linpelvis/carrygo/master/landscape.svg?style=flat)](https://landscape.io/github/linpelvis/carrygo/master)
 [![Requirements Status](https://requires.io/github/linpelvis/carrygo/requirements.svg?branch=master)](https://requires.io/github/linpelvis/carrygo/requirements/?branch=master)
 
 

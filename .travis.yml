@@ -11,7 +11,7 @@
   "jdk": "oraclejdk7",
 
   "before_install":
-    - ./install-protobuf.sh,
+    - ./install-protobuf.sh
 
   "install": [
     "mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V"

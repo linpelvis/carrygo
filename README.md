@@ -32,6 +32,11 @@ carrygo解析及存储服务主要有两个模块，分别是parser和store。
 # 相关资源 #
 canal：<a href="https://github.com/alibaba/canal">https://github.com/alibaba/canal</a>
 
+# TODO #
+1. CarryServer服务不可用导致queue数据丢失，存储batchId至zookeeper并记录消费的batchId，丢失就rollback。
+2. 添加CarrygoManager，CarrgoMonitor服务。
+3. 添加管理控制台。
+
 
 # 问题反馈 #
 1. 邮箱：linpelvis@gmail.com
